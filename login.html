@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <label for="usuario">Usuário</label>
+    <input id="usuario" type="text" placeholder="Usuário">
+    <label for="usuario">Senha</label>
+    <input id="senha" type="text" placeholder="Senha">
+
+    <button onclick="login()">Login</button>
+
+    <script>
+
+        function login() {
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            if (usuario == "admin" && senha == "123") {
+                window.location.href = "home.html";
+            } else {
+                alert("Usuário ou senha invalido!");
+                window.location.href = "login.html";
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>
